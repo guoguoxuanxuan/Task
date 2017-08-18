@@ -2,12 +2,12 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Context Menu on DataGrid - jQuery EasyUI Demo</title>
-	<link rel="stylesheet" type="text/css" href="${request.contextPath}/shares/jquery/themes/default/easyui.css">
-	<link rel="stylesheet" type="text/css" href="${request.contextPath}/shares/jquery/themes/icon.css">
-	<link rel="stylesheet" type="text/css" href="${request.contextPath}/shares/jquery/themes/demo.css">
-	<script type="text/javascript" src="${request.contextPath}/shares/jquery/js/jquery.min.js"></script>
-	<script type="text/javascript" src="${request.contextPath}/shares/jquery/js/query.easyui.min.js"></script>
+	<title>${crrcgo}</title>
+	<link rel="stylesheet" type="text/css" href="${request.contextPath}/static/jquery/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="${request.contextPath}/static/jquery/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="${request.contextPath}/static/jquery/themes/demo.css">
+	<script type="text/javascript" src="${request.contextPath}/static/jquery/js/jquery.min.js"></script>
+	<script type="text/javascript" src="${request.contextPath}/static/jquery/js/jquery.easyui.min.js"></script>
 </head>
 <body>
 	<h2>Context Menu on DataGrid</h2>
@@ -19,18 +19,16 @@
 			$('#dg').datagrid({
 				url: 'datagrid_data1.json',
 				method: 'get',
-				title: 'Context Menu on DataGrid',
+				title: '${tableTitle}',
 				iconCls: 'icon-save',
-				width: 700,
+				width: 1080,
 				height: 250,
 				fitColumns: true,
 				singleSelect: true,
 				columns:[[
-					{field:'itemid',title:'Item ID',width:80},
-					{field:'productid',title:'Product ID',width:120},
-					{field:'listprice',title:'List Price',width:80,align:'right'},
-					{field:'unitcost',title:'Unit Cost',width:80,align:'right'},
-					{field:'attr1',title:'Attribute',width:250},
+					{field:'itemid',title:'${taskTableId}',width:80,align:'center'},
+					{field:'productid',title:'${taskTableTitle}',width:120,align:'center'},
+					{field:'listprice',title:'${taskTableDescribe}',width:80,align:'center'},
 					{field:'status',title:'Status',width:60,align:'center'}
 				]],
 				onHeaderContextMenu: function(e, field){

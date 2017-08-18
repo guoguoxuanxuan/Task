@@ -20,7 +20,7 @@ public class CrrcgoTaskApplication {
 	 @RequestMapping("/")
 	    String home() {
 		 
-		 return "redirect:taskDatas";
+		 return "redirect:tasks";
 	       // return "redirect:tasks";
 	    }
 }
